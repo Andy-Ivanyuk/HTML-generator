@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/toggle.css" />
+    <link rel="stylesheet" href="styles/output-container.css" />
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Text2Web</title>
+  </head>
+  <body>
+    <h2>Convert simple text into a web page</h2>
+    <textarea class="default-border" name="Text1" cols="60" rows="5"></textarea>
+    <div class="newline-margin-top">
+      <button class="default-border" id="generate-button">
+        Generate
+      </button>
+    </div>
+    <div class="output-container default-border newline-margin-top">
+      <div class="titlebar">
+        <span class="toggle">
+          <button
+            class="default-border selected"
+            onclick="selectOutputType(this, 1)"
+          >
+            Code</button
+          ><button class="default-border" onclick="selectOutputType(this, 0)">
+            Preview
+          </button>
+        </span>
+      </div>
+      <div class="iframe-container">
+        <iframe id="iframe-id-code" src="about:blank"></iframe>
+        <iframe
+          class="disabled"
+          id="iframe-id-preview"
+          src="about:blank"
+        ></iframe>
+      </div>
+    </div>
+    <script src="scripts/ui-interactions.js"></script>
+    <!-- <script src="scripts/generation/generation.const.js"></script> -->
+    <script type="module" src="scripts/generation/generation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+:root {
+  --border-color-light: #e6e6e6;
+  --border-color-dark: #767676;
+  --border-color: #b4b4b4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+body > h2 {
+  font-weight: 900;
+}
+
+.newline-margin-top {
+  margin-top: 1em;
+}
+
+.default-border {
+  border: 1px solid var(--border-color);
+}
+
+.disabled {
+  display: none;
+}

@@ -1,0 +1,32 @@
+.output-container {
+  display: inline-block;
+  text-align: left;
+}
+.output-container,
+body > textarea {
+  width: 80vw;
+}
+.output-container > .titlebar {
+  padding: 3px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.iframe-container {
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.iframe-container > iframe {
+  border: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.monospace {
+  font-family: "Roboto Mono", monospace;
+}

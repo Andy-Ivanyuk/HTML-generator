@@ -1,0 +1,29 @@
+button:focus {
+  outline: 0;
+}
+button {
+  background-color: white;
+  transition: background-color, border, box-shadow -webkit-box-shadow;
+  transition-duration: 0.2s;
+  height: 2em;
+}
+button:hover {
+  border: 1px solid var(--border-color-dark);
+}
+.toggle > button.selected,
+button:active {
+  -moz-box-shadow: inset 0 0 3px var(--border-color-dark);
+  -webkit-box-shadow: inset 0 0 3px var(--border-color-dark);
+  box-shadow: inset 0 0 3px var(--border-color-dark);
+}
+.toggle > button.selected {
+  background-color: var(--border-color-light);
+}
+
+.toggle > button:first-of-type {
+  border-radius: 6px 0 0 6px;
+}
+.toggle > button:last-of-type {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
